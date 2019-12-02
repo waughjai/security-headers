@@ -2,7 +2,7 @@
     "name": "waughj/security-headers",
     "description": "Simple class for applying security headers to website.",
     "keywords": [ "security headers" ],
-    "license": "GPL-2.0-or-later",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Jaimeson Waugh",
@@ -12,9 +12,6 @@
     "type": "library",
     "require": {
 		"php": ">=7.0"
-    },
-    "require-dev": {
-		"phpunit/phpunit": "6.*"
     },
     "autoload": {
         "psr-4": {
