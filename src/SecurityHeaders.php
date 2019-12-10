@@ -5,7 +5,7 @@ namespace WaughJ\SecurityHeaders;
 
 class SecurityHeaders
 {
-	public static function setAllAutoPolicies() : void
+	public static function setAllAutoPolicies()
 	{
 		self::setSecureXFrameOption();
 		self::setXSSProtectionOn();
@@ -14,27 +14,27 @@ class SecurityHeaders
 		self::setHSTS();
 	}
 
-	public static function setHSTS() : void
+	public static function setHSTS()
 	{
-		header( 'Strict-Transport-Security: max-age=31536000; includeSubDomains; preload; env=HTTPS' );
+		header( 'Strict-Transport-Security: max-age=31536000; includeSubDomains; preload' );
 	}
 
-	public static function setSecureXFrameOption() : void
+	public static function setSecureXFrameOption()
 	{
 		header( 'X-Frame-Options: SAMEORIGIN' );
 	}
 
-	public static function setXSSProtectionOn() : void
+	public static function setXSSProtectionOn()
 	{
 		header( 'X-Xss-Protection: 1; mode=block' );
 	}
 
-	public static function setNoSniffOn() : void
+	public static function setNoSniffOn()
 	{
 		header( 'X-Content-Type-Options: nosniff' );
 	}
 
-	public static function setSecureReferrerOn() : void
+	public static function setSecureReferrerOn()
 	{
 		header( 'Referrer-Policy: no-referrer-when-downgrade' );
 	}
